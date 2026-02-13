@@ -1,0 +1,510 @@
+/* ============================================
+   FBC TEAM MEMBER WIDGET STYLES
+   ============================================ */
+
+/* Main Container */
+.fbc-team-member {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.fbc-hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 80px;
+    background: linear-gradient(135deg, #c8b5d9 0%, #d4c4e3 100%);
+    min-height: 500px;
+    gap: 60px;
+}
+
+.fbc-hero-content {
+    flex: 1;
+    max-width: 500px;
+}
+
+.fbc-hero-image {
+    flex: 0 0 400px;
+    max-width: 400px;
+}
+
+/* Name */
+.fbc-name {
+    font-size: 56px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #2c3e50;
+    margin: 0 0 20px 0;
+}
+
+/* Position Type */
+.fbc-position {
+    font-size: 24px;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+
+/* Designation */
+.fbc-designation {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Booking Button */
+.fbc-booking-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #2c3e50;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.fbc-booking-btn:hover {
+    background-color: #1a252f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.3);
+}
+
+/* Profile Photo */
+.fbc-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    max-height: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   MAIN CONTENT SECTION
+   ============================================ */
+.fbc-main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+}
+
+/* Card Styles */
+.fbc-card {
+    padding: 50px;
+    margin-bottom: 40px;
+    border-radius: 20px;
+}
+
+.fbc-team-motivation {
+    display: flex;
+    font-style: italic;
+    gap: 20px;
+}
+
+.fbc-motivation-card {
+    background: linear-gradient(to bottom, #8DCBC6 0%, #ffffff 100%);
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 50px;
+}
+
+.fbc-motivation-card h2 {
+    flex: 0 0 400px;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.fbc-motivation {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.fbc-why-therapist-card {
+    background: linear-gradient(to bottom, #8DCBC6 0%, #ffffff 100%);
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border-radius: 50px;
+}
+
+.fbc-why-therapist-card h2 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #2c3e50;
+    margin: 0 0 20px 0;
+}
+
+.fbc-why-therapist {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Info Row */
+.fbc-info-row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.fbc-license,
+.fbc-specialization {
+    flex: 1;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* About Me */
+.fbc-about-me {
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.fbc-about-me p {
+    margin-bottom: 16px;
+}
+
+.fbc-about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.fbc-about-content {
+    width: 50%
+}
+
+.fbc-about-image {
+    width: 50%;
+    max-width: 500px;
+}
+
+.fbc-about-image img {
+    border-radius: 50px;
+}
+
+
+
+/* Core Focus */
+.fbc-core-focus {
+    margin-bottom: 40px;
+}
+
+.fbc-core-focus h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 12px;
+}
+
+.fbc-core-focus p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: white;
+}
+
+/* ============================================
+   SECTIONS (Credentials, Training, Support)
+   ============================================ */
+.fbc-section {
+    margin-bottom: 50px;
+}
+
+.fbc-section h3 {
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 10px;
+}
+
+.fbc-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.fbc-list li {
+    padding: 12px 0;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.fbc-list li:last-child {
+    border-bottom: none;
+}
+
+/* ============================================
+   FAQ SECTION
+   ============================================ */
+.fbc-faq {
+    background: #2c3e50;
+    padding: 60px;
+    border-radius: 0;
+    margin: 60px 0;
+    margin-left: -40px;
+    margin-right: -40px;
+}
+
+.fbc-faq-title {
+    font-size: 42px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.fbc-faq-item {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.fbc-faq-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.fbc-faq-question {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.fbc-faq-answer {
+    font-size: 16px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* ============================================
+   SOCIAL MEDIA
+   ============================================ */
+.fbc-social-media {
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.fbc-social-media h3 {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.fbc-social-links {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.fbc-social-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #202641;
+    color: #ffffff !important;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.fbc-social-link:hover {
+    background-color: transparent;
+    transform: translateY(-2px);
+    color: white !important;
+}
+
+/* Accordion Styles */
+
+.fbc-team-support {
+    max-width: 500px;
+}
+
+.fbc-accordion {
+    border: none;
+    margin-bottom: 20px;
+}
+
+.fbc-accordion-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 20px 0;
+    list-style: none;
+}
+
+.fbc-accordion-title::-webkit-details-marker {
+    display: none;
+}
+
+.fbc-accordion-title h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+}
+
+.fbc-accordion-icon {
+    width: 24px;
+    height: 24px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.fbc-accordion-icon::before,
+.fbc-accordion-icon::after {
+    content: '';
+    position: absolute;
+    background: #2c3e50;
+    transition: transform 0.3s ease;
+}
+
+/* Línea vertical de la flecha */
+.fbc-accordion-icon::before {
+    width: 2px;
+    height: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fbc-accordion-icon::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%) rotate(45deg);
+    background: transparent;
+}
+
+.fbc-accordion[open] .fbc-accordion-icon::before {
+    transform: translate(-50%, -50%);
+}
+
+.fbc-accordion[open] .fbc-accordion-icon::after {
+    transform: translate(-50%, -30%) rotate(-135deg);
+}
+
+.fbc-accordion-content {
+    padding-top: 20px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 1024px) {
+    .fbc-hero-section {
+        padding: 50px 40px;
+        gap: 40px;
+    }
+
+    .fbc-hero-image {
+        flex: 0 0 350px;
+        max-width: 350px;
+    }
+
+    .fbc-name {
+        font-size: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .fbc-hero-section {
+        flex-direction: column-reverse;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .fbc-hero-content {
+        max-width: 100%;
+    }
+
+    .fbc-hero-image {
+        flex: 1;
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .fbc-name {
+        font-size: 36px;
+    }
+
+    .fbc-position {
+        font-size: 20px;
+    }
+
+    .fbc-main-content {
+        padding: 40px 20px;
+    }
+
+    .fbc-motivation-card {
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .fbc-motivation-card h2 {
+        flex: 1;
+        font-size: 26px;
+    }
+
+    .fbc-card {
+        padding: 30px;
+    }
+
+    .fbc-info-row {
+        flex-direction: column;
+    }
+
+    .fbc-faq {
+        padding: 40px 20px;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+
+    .fbc-faq-title {
+        font-size: 32px;
+    }
+}
