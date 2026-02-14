@@ -62,39 +62,15 @@ class FBC_Team_Member_motivation_Template_Widget extends \Elementor\Widget_Base 
         $motivation = $team_content['motivation'] ?? '';
         
         if ( $motivation ) {
-            echo '<div class="fbc-question-card fbc-motivation-card">';
-            
-            echo '<h3 class="fbc-question-title">';
-            echo 'How will I know if you are a good fit for working with me?';
-            echo '</h3>';
+           
             
             echo '<div class="fbc-question-answer">';
             echo nl2br( esc_html( wp_strip_all_tags( $motivation ) ) );
             echo '</div>';
-            
-            echo '</div>'; // .fbc-motivation-card
+           
         }
 
-        /*
-        ============================
-        BLOCK 4: WHY THERAPIST CARD
-        ============================
-        */
-        $why_therapist = $team_content['why_therapist'] ?? '';
-        
-        if ( $why_therapist ) {
-            echo '<div class="fbc-question-card fbc-why-therapist-card">';
-            
-            echo '<h3 class="fbc-question-title">';
-            echo 'Why did you decide to become a therapist?';
-            echo '</h3>';
-            
-            echo '<div class="fbc-question-answer">';
-            echo wp_kses_post( $why_therapist );
-            echo '</div>';
-            
-            echo '</div>'; // .fbc-why-therapist-card
-        }
+    
 
         echo '</div>'; // .fbc-team-motivation
     }

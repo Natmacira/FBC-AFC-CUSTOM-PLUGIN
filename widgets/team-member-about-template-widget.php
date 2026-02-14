@@ -60,7 +60,7 @@ class FBC_Team_Member_About_Template_Widget extends \Elementor\Widget_Base {
         $about_me = $team_content['about_me'] ?? '';
         $photo = get_field('profile_photo', $post_id);
 
-        if ( $about_me || $photo ) {
+        if ( $about_me && $photo ) {
             echo '<div class="fbc-about-section">';
             
             
@@ -91,4 +91,4 @@ class FBC_Team_Member_About_Template_Widget extends \Elementor\Widget_Base {
         
     }
         
-    }
+}

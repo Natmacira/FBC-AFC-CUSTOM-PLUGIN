@@ -50,25 +50,19 @@ class FBC_Team_Member_Support_Template_Widget extends \Elementor\Widget_Base {
         $post_id = get_the_ID();
         $team_content = get_field('team_content', $post_id);
 
-        echo '<div class="fbc-team-support">';
-
-  
-
-       /*
+         /*
         ============================
         TYPES OF SUPPORT OFFERED
         ============================
         */
+
+
+       echo '<div class="fbc-team-support">';
+
         if ( have_rows('types_of_support', $post_id) ) {
             echo '<div class="fbc-section fbc-types-of-support">';
             
-            echo '<details class="fbc-accordion">';
-            echo '<summary class="fbc-accordion-title">';
-            echo '<h3>Types of Support Offered:</h3>';
-            echo '<span class="fbc-accordion-icon"></span>';
-            echo '</summary>';
-            
-            echo '<div class="fbc-accordion-content">';
+            echo '<h2>Types of Support Offered:</h2>';
             echo '<ul class="fbc-list">';
             
             while ( have_rows('types_of_support', $post_id) ) {
@@ -83,11 +77,10 @@ class FBC_Team_Member_Support_Template_Widget extends \Elementor\Widget_Base {
             }
             
             echo '</ul>';
-            echo '</div>'; // .fbc-accordion-content
-            echo '</details>'; // .fbc-accordion
-            
             echo '</div>'; // .fbc-section
-            echo '</div>'; // .fbc-team-support 
         }
-}
-}
+        
+        echo '</div>'; // .fbc-team-support
+        
+    }  
+}  

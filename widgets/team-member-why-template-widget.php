@@ -2,18 +2,18 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-class FBC_Team_Member_Addtraining_Template_Widget extends \Elementor\Widget_Base {
+class FBC_Team_Member_Why_Template_Widget extends \Elementor\Widget_Base {
 
     public function get_name() {
-        return 'fbc_team_member_addtraining';
+        return 'fbc_team_member_why';
     }
 
     public function get_title() {
-        return 'FBC Team Member Addtraining';
+        return 'FBC Team Member Why';
     }
 
     public function get_icon() {
-        return 'eicon-person';
+        return 'eicon-text-area';
     }
 
     public function get_categories() {
@@ -25,7 +25,7 @@ class FBC_Team_Member_Addtraining_Template_Widget extends \Elementor\Widget_Base
     }
 
     public function get_style_depends() {
-        return ['fbc-team-member-styles'];
+        return ['fbc-team-member-why-styles'];
     }
 
     protected function render() {
@@ -34,7 +34,7 @@ class FBC_Team_Member_Addtraining_Template_Widget extends \Elementor\Widget_Base
 
         // Enqueue styles
         wp_enqueue_style(
-            'fbc-team-member-styles',
+            'fbc-team-member-motivation-styles',
             plugins_url('assets/css/fbc-team-member-general.css', dirname(__FILE__)),
             [],
             '1.0.0'
@@ -48,32 +48,30 @@ class FBC_Team_Member_Addtraining_Template_Widget extends \Elementor\Widget_Base
         );
 
         $post_id = get_the_ID();
+        $team_content = get_field('team_content', $post_id);
 
-        echo '<div class="fbc-team-addtraining">';
+        echo '<div class="fbc-team-motivation">';
+
+  
+
+
         /*
         ============================
-        ADDITIONAL TRAINING (MODELS OF THERAPY)
+        BLOCK 4: WHY THERAPIST CARD
         ============================
         */
-        if ( have_rows('additional_training', $post_id) ) {
-            echo '<div class="fbc-section fbc-additional-training">';
+        $why_therapist = $team_content['why_therapist'] ?? '';
         
-            echo '<ul class="fbc-list">';
+        if ( $why_therapist ) {
+           
             
-            while ( have_rows('additional_training', $post_id) ) {
-                the_row();
-                $training = get_sub_field('single_training');
-                
-                if ( $training ) {
-                    echo '<li class="fbc-training-item">';
-                    echo esc_html($training);
-                    echo '</li>';
-                }
-            }
-            
-            echo '</ul>';
+            echo '<div class="fbc-question-answer">';
+            echo wp_kses_post( $why_therapist );
             echo '</div>';
+            
         }
-        echo '</div>'; 
+
+        echo '</div>'; // .fbc-team-motivation
+        echo '</div>';
     }
 }

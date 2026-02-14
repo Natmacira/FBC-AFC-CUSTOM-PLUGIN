@@ -50,7 +50,7 @@ class FBC_Team_Member_Credentials_Template_Widget extends \Elementor\Widget_Base
         $post_id = get_the_ID();
 
       
-
+        echo '<div class="fbc-team-credentials">';
         /*
         ============================
         ACADEMIC CREDENTIALS
@@ -58,7 +58,7 @@ class FBC_Team_Member_Credentials_Template_Widget extends \Elementor\Widget_Base
         */
         if ( have_rows('academic_credentials', $post_id) ) {
             echo '<div class="fbc-section fbc-credentials">';
-            echo '<h3>ACADEMIC CREDENTIALS:</h3>';
+            
             echo '<ul class="fbc-list">';
             
             while ( have_rows('academic_credentials', $post_id) ) {
@@ -75,7 +75,6 @@ class FBC_Team_Member_Credentials_Template_Widget extends \Elementor\Widget_Base
             echo '</ul>';
             echo '</div>';
         }
-
         echo '</div>';
     }
 }
