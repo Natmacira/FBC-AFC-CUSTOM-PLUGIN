@@ -37,7 +37,7 @@
     font-size: 56px;
     font-weight: 400;
     line-height: 1.2;
-    color: #2c3e50;
+    color: #202641;
     margin: 0 0 20px 0;
 }
 
@@ -45,7 +45,7 @@
 .fbc-position {
     font-size: 24px;
     font-weight: 500;
-    color: #2c3e50;
+    color: #202641;
     margin-bottom: 12px;
 }
 
@@ -61,7 +61,7 @@
 .fbc-booking-btn {
     display: inline-block;
     padding: 14px 32px;
-    background-color: #2c3e50;
+    background-color: #202641;
     color: #ffffff;
     text-decoration: none;
     border-radius: 50px;
@@ -136,6 +136,19 @@
     margin: auto;
 }
 
+@media (max-width: 1024px) {
+
+    .fbc-about-content h2,
+    .fbc-support-title-faq {
+        font-size: 42px !important;
+    }
+}
+
+.fbc-about-content h2 {
+    text-align: left !important;
+    margin-bottom: 15px;
+}
+
 .fbc-support-title-faq {
     color: white;
 }
@@ -147,6 +160,8 @@
     justify-content: space-evenly;
     gap: 5%;
 }
+
+
 
 .fbc-about-section p {
     font-size: 16px;
@@ -165,6 +180,23 @@
     border-radius: 30px;
 }
 
+@media (max-width: 1024px) {
+
+    .fbc-about-section {
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    .fbc-about-content {
+        width: 100%
+    }
+
+    .fbc-about-image {
+        width: 100%
+    }
+}
+
 
 
 /* Core Focus */
@@ -175,7 +207,7 @@
 .fbc-core-focus h3 {
     font-size: 24px;
     font-weight: 600;
-    color: #2c3e50;
+    color: #202641;
     margin-bottom: 12px;
 }
 
@@ -197,15 +229,16 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: #2c3e50;
+    color: #202641;
     margin-bottom: 20px;
-    border-bottom: 2px solid #2c3e50;
+    border-bottom: 2px solid #202641;
     padding-bottom: 10px;
 }
 
 .fbc-list {
     padding: 0;
     margin: 0;
+    padding-left: 20px !important;
 }
 
 .fbc-list li {
@@ -216,7 +249,7 @@
 }
 
 .fbc-support-item {
-    color: #2c3e50;
+    color: #202641;
 }
 
 
@@ -225,7 +258,7 @@
    FAQ SECTION
    ============================================ */
 .fbc-faq {
-    background: #2c3e50;
+    background: #202641;
     padding: 60px;
     border-radius: 0;
     margin: 60px 0;
@@ -275,7 +308,7 @@
 .fbc-social-media h3 {
     font-size: 24px;
     font-weight: 600;
-    color: #2c3e50;
+    color: #202641;
     margin-bottom: 20px;
 }
 
@@ -316,6 +349,12 @@
     color: white !important;
 }
 
+@media (max-width: 1024px) {
+    .fbc-team-support h2 {
+        font-size: 42px !important;
+    }
+}
+
 .fbc-team-support ul {
     columns: 2;
     column-gap: 40px;
@@ -340,6 +379,12 @@
     .fbc-name {
         font-size: 48px;
     }
+
+    .fbc-team-support ul {
+        columns: 1;
+        max-height: none;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -392,9 +437,10 @@
    FAQ ACCORDION STYLES
    ============================================ */
 .fbc-team-faq {
-    background: #2c3e50;
+    background: #202641;
     padding: 80px 60px;
     margin: 0;
+    margin-top: -25px;
 }
 
 .fbc-faq {
@@ -407,7 +453,7 @@
     font-weight: 400;
     color: #ffffff;
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 20px;
     font-family: 'Playfair Display', serif;
     line-height: 1.2;
 }
@@ -443,7 +489,7 @@
 
 .fbc-faq-accordion[open] .fbc-faq-accordion-title {
     background: white;
-    color: #2c3e50;
+    color: #202641;
     border-radius: 15px;
 }
 
@@ -458,7 +504,7 @@
 }
 
 .fbc-faq-accordion[open] .fbc-faq-question {
-    color: #2c3e50;
+    color: #202641;
 }
 
 
@@ -476,7 +522,7 @@
 }
 
 .fbc-faq-accordion[open] .fbc-faq-accordion-icon {
-    border-color: #2c3e50;
+    border-color: #202641;
     transform: rotate(45deg);
 }
 
@@ -490,7 +536,7 @@
 
 .fbc-faq-accordion[open] .fbc-faq-accordion-icon::before,
 .fbc-faq-accordion[open] .fbc-faq-accordion-icon::after {
-    background: #2c3e50;
+    background: #202641;
 }
 
 /* Línea horizontal del + */
@@ -520,6 +566,7 @@
     font-size: 17px;
     line-height: 1.8;
     color: white;
+    margin-top: 20px;
 }
 
 .fbc-faq-answer p {
@@ -564,6 +611,7 @@
     }
 }
 
-li.fbc-training-item {
-    color: #2c3e50 !important;
+li.fbc-training-item,
+li.fbc-credential-item {
+    color: #202641 !important;
 }

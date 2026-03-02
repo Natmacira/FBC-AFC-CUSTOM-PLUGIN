@@ -3,7 +3,7 @@
 /**
  * Plugin Name: FBC ACF Elementor Widget
  * Description: Custom Elementor widget to display ACF fields
- * Version: 1.4.5
+ * Version: 1.6.7
  * Author: Natalia Ciraolo
  */
 
@@ -27,6 +27,8 @@ function fbc_acf_elementor_widget_init()
         require_once plugin_dir_path(__FILE__) . 'widgets/team-member-support-template-widget.php';
         require_once plugin_dir_path(__FILE__) . 'widgets/team-member-socialmedia-template-widget.php';
         require_once plugin_dir_path(__FILE__) . 'widgets/team-member-faq-template-widget.php';
+        require_once plugin_dir_path(__FILE__) . 'widgets/services-card-team-member.php';
+        require_once plugin_dir_path(__FILE__) . 'widgets/services-card-all-team-member.php';
 
         require_once plugin_dir_path(__FILE__) . 'widgets/team-member-template-widget.php';
 
@@ -64,6 +66,14 @@ function fbc_acf_elementor_widget_init()
 
         $widgets_manager->register(
             new \FBC_Team_Member_Template_Widget()
+        );
+
+        $widgets_manager->register(
+            new \FBC_Service_Providers_Grid_Widget()
+        );
+        
+        $widgets_manager->register(
+            new \FBC_All_Team_Members_Grid_Widget()
         );
     });
 }
