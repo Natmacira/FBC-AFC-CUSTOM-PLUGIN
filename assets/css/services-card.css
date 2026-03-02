@@ -14,7 +14,7 @@
 .fbc-provider-card {
     background: var(--card-bg, #fff);
     border-radius: 16px;
-    padding: 24px;
+    padding: 20px 10px;
     text-align: center;
     box-shadow: 0 2px 16px rgba(0, 0, 0, 0.07);
     display: flex;
@@ -25,8 +25,8 @@
 
 .fbc-provider-photo img {
     border-radius: 12px;
-    width: 180px;
-    height: 180px;
+    width: 150px;
+    height: 150px;
     object-fit: cover;
 }
 
@@ -94,5 +94,45 @@
 }
 
 .fbc-provider-info-inner-container {
-    min-height: 215px;
+    min-height: 180px;
+}
+
+.fbc-arrow {
+    height: 21px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.fbc-provider-specializes p {
+    min-height: 48px;
+}
+
+.fbc-book-now svg {
+    border: solid 2px white;
+    border-radius: 60px;
+    height: 16px;
+    width: 16px;
+}
+
+/* Slider team mebers */
+@media (max-width: 1024px) {
+    .fbc-providers-grid {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        justify-content: flex-start;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        padding-bottom: 12px;
+    }
+
+    .fbc-providers-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .fbc-provider-card {
+        flex: 0 0 80%;
+        scroll-snap-align: start;
+        max-width: 270px;
+    }
 }

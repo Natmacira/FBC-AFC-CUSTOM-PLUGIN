@@ -52,6 +52,7 @@ class FBC_All_Team_Members_Grid_Widget extends \Elementor\Widget_Base {
             [],
             '1.0.0'
         );
+    
 
         $providers = get_posts([
             'post_type'      => 'team',
