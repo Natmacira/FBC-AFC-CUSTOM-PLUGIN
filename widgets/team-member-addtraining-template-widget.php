@@ -63,10 +63,16 @@ class FBC_Team_Member_Addtraining_Template_Widget extends \Elementor\Widget_Base
             while ( have_rows('additional_training', $post_id) ) {
                 the_row();
                 $training = get_sub_field('single_training');
-                
+                $link     = get_sub_field('link'); 
+            
                 if ( $training ) {
                     echo '<li class="fbc-training-item">';
-                    echo esc_html($training);
+            
+                    if ( $link ) {
+                        echo '<a href="' . esc_url( $link ) . '">' . esc_html( $training ) . '</a>';
+                    } else {
+                        echo esc_html( $training );
+                    }
                     echo '</li>';
                 }
             }

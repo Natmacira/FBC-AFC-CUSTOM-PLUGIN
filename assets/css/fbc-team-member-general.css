@@ -140,7 +140,7 @@
 
     .fbc-about-content h2,
     .fbc-support-title-faq {
-        font-size: 42px !important;
+        font-size: 36px !important;
     }
 }
 
@@ -351,7 +351,11 @@
 
 @media (max-width: 1024px) {
     .fbc-team-support h2 {
-        font-size: 42px !important;
+        font-size: 36px !important;
+    }
+
+    .fbc-faq-title {
+        font-size: 36px !important;
     }
 }
 

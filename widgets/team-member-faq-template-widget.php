@@ -50,7 +50,7 @@ class FBC_Team_Member_Faq_Template_Widget extends \Elementor\Widget_Base {
         
         echo '<div class="fbc-team-faq">'; // Contenedor principal
         echo '<h2 class="fbc-support-title-faq">';
-        echo 'Frequently Asked Questions About Grief Counselling in Calgary';
+        echo 'Frequently Asked Questions About Therapy With Me';
       
         echo '</h2>';
         /*
