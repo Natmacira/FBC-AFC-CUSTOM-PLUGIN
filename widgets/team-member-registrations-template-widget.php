@@ -2,14 +2,14 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-class FBC_Team_Member_Credentials_Template_Widget extends \Elementor\Widget_Base {
+class FBC_Team_Member_Registrations_Template_Widget extends \Elementor\Widget_Base {
 
     public function get_name() {
-        return 'fbc_team_member_credentials';
+        return 'fbc_team_member_registrations';
     }
 
     public function get_title() {
-        return 'FBC Team Member Credentials';
+        return 'FBC Team Member Registrations';
     }
 
     public function get_icon() {
@@ -50,30 +50,24 @@ class FBC_Team_Member_Credentials_Template_Widget extends \Elementor\Widget_Base
         $post_id = get_the_ID();
 
       
-        echo '<div class="fbc-team-credentials">';
+        echo '<div class="fbc-team-registrations">';
         /*
         ============================
-        ACADEMIC CREDENTIALS
+       PROFESSIONAL REGISTRATION
         ============================
         */
-        if ( have_rows('academic_credentials', $post_id) ) {
-            echo '<div class="fbc-section fbc-credentials">';
-            echo '<h3 class="fbc-credentials-title">Academic Credentials:</h3>';
-        
-            $credentialStatement = get_field('academic_credentials_statement', $post_id);
-            if ( $credentialStatement ) {
-                echo '<p class="fbc-credential-statment">' . esc_html($credentialStatement) . '</p>';
-            }
-        
+        if ( have_rows('professional_registration', $post_id) ) {
+            echo '<div class="fbc-section fbc-registrations">';
+            echo '<h3 class="fbc-registrations-title">Professional registration:</h3>';
             echo '<ul class="fbc-list">';
-        
-            while ( have_rows('academic_credentials', $post_id) ) {
+            
+            while ( have_rows('professional_registration', $post_id) ) {
                 the_row();
-                $credential = get_sub_field('single_credential');
+                $registration = get_sub_field('single_registration');
                 
-                if ( $credential ) {
+                if ( $registration ) {
                     echo '<li class="fbc-credential-item">';
-                    echo esc_html($credential);
+                    echo esc_html($registration);
                     echo '</li>';
                 }
             }
