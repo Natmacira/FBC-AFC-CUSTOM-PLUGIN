@@ -83,7 +83,7 @@ class FBC_Team_Member_Faq_Template_Widget extends \Elementor\Widget_Base {
                     if ( $answer ) {
                         echo '<div class="fbc-faq-accordion-content">';
                         echo '<div class="fbc-faq-answer">';
-                        echo wp_strip_all_tags($answer);
+                        echo wp_kses_post($answer);
                         echo '</div>';
                         echo '</div>';
                     }

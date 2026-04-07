@@ -3,7 +3,7 @@
 /**
  * Plugin Name: FBC ACF Elementor Widget
  * Description: Custom Elementor widget to display ACF fields
- * Version: 1.8.3
+ * Version: 1.8.6
  * Author: Natalia Ciraolo
  */
 

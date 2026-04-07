@@ -68,6 +68,10 @@ class FBC_Service_Providers_Grid_Widget extends \Elementor\Widget_Base {
         <div class="fbc-providers-grid">
             <?php foreach ($providers as $provider) :
                 $provider_id  = $provider->ID;
+
+                // Skip providers that are not published
+                if ( get_post_status( $provider_id ) !== 'publish' ) continue;
+
                 $permalink    = get_permalink($provider_id);
                 $title        = get_the_title($provider_id);
                 $specializes  = get_field('specializes_in', $provider_id);

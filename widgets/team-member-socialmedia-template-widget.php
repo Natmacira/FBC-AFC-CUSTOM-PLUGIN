@@ -57,7 +57,6 @@ class FBC_Team_Member_Socialmedia_Template_Widget extends \Elementor\Widget_Base
         */
         if ( have_rows('social_media', $post_id) ) {
             echo '<div class="fbc-social-media">';
-            echo '<h3>Connect With Me</h3>';
             echo '<div class="fbc-social-links">';
             
             while ( have_rows('social_media', $post_id) ) {
@@ -65,9 +64,32 @@ class FBC_Team_Member_Socialmedia_Template_Widget extends \Elementor\Widget_Base
                 $platform = get_sub_field('type');
                 $url = get_sub_field('url');
                 
-                if ( $platform && $url ) {
-                    echo '<a href="'.esc_url($url).'" class="fbc-social-link" target="_blank" rel="noopener noreferrer">';
-                    echo esc_html($platform);
+                if ( $url ) {
+                    $host = strtolower( parse_url( $url, PHP_URL_HOST ) );
+                    if ( str_contains( $host, 'facebook' ) ) {
+                        $icon = 'fab fa-facebook';
+                        $label = 'Facebook';
+                    } elseif ( str_contains( $host, 'instagram' ) ) {
+                        $icon = 'fab fa-instagram';
+                        $label = 'Instagram';
+                    } elseif ( str_contains( $host, 'linkedin' ) ) {
+                        $icon = 'fab fa-linkedin';
+                        $label = 'LinkedIn';
+                    } elseif ( str_contains( $host, 'twitter' ) || str_contains( $host, 'x.com' ) ) {
+                        $icon = 'fab fa-x-twitter';
+                        $label = 'X / Twitter';
+                    } elseif ( str_contains( $host, 'youtube' ) ) {
+                        $icon = 'fab fa-youtube';
+                        $label = 'YouTube';
+                    } elseif ( str_contains( $host, 'tiktok' ) ) {
+                        $icon = 'fab fa-tiktok';
+                        $label = 'TikTok';
+                    } else {
+                        $icon = 'fas fa-link';
+                        $label = 'Link';
+                    }
+                    echo '<a href="' . esc_url( $url ) . '" class="fbc-social-link" target="_blank" rel="noopener noreferrer" aria-label="' . esc_attr( $label ) . '">';
+                    echo '<i class="' . esc_attr( $icon ) . '"></i>';
                     echo '</a>';
                 }
             }
