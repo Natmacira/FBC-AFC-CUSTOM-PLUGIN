@@ -79,6 +79,7 @@ class FBC_Service_Providers_Grid_Widget extends \Elementor\Widget_Base {
                 $team_content = get_field('team_content', $provider_id);
                 $job_title    = !empty($team_content['job_title']) ? $team_content['job_title'] : '';
                 $additional_info = !empty($team_content['additional_info']) ? $team_content['additional_info'] : '';
+                $booking_link = get_field('booking_link', $provider_id) ?: 'https://onelife.janeapp.com/';
             ?>
                 <div class="fbc-provider-card">
 
@@ -117,7 +118,7 @@ class FBC_Service_Providers_Grid_Widget extends \Elementor\Widget_Base {
                                 </div>
                             <?php endif; ?>
                         </div>
-                            <a href="https://onelife.janeapp.com/" class="fbc-book-now" target="_blank">
+                            <a href="<?php echo esc_url($booking_link); ?>" class="fbc-book-now" target="_blank">
                                 Book Now <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21" fill="none"><path d="M4 10.5H17M17 10.5L11.5 5M17 10.5L11.5 16" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                             </a>
 
