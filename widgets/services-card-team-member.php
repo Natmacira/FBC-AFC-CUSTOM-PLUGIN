@@ -58,6 +58,12 @@ class FBC_Service_Providers_Grid_Widget extends \Elementor\Widget_Base {
         $post_id   = get_the_ID();
         $providers = get_field('providers', $post_id);
 
+        if ( !empty($providers) ) {
+            usort($providers, function($a, $b) {
+                return $a->menu_order - $b->menu_order;
+            });
+        }
+
         if (empty($providers)) {
             if (\Elementor\Plugin::$instance->editor->is_edit_mode()) {
                 echo '<p>No providers assigned to this service.</p>';
